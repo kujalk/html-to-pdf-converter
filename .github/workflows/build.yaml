@@ -67,8 +67,8 @@ jobs:
 
         # Replace placeholders in the template file
         cd ../Front-end/pdf-converter
-        cat src/Config.json | envsubst > src/Config.json
-        cat src/Config.json 
+        # cat src/Config.json | envsubst > src/Config.json
+        # cat src/Config.json 
 
         # Build react app and push app 
         npm install react-scripts --save
