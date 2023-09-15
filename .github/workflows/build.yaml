@@ -64,7 +64,7 @@ jobs:
         export bucket=$bucket
 
         # Replace placeholders in the template file
-        cd ../Front-end/pdf-converter
+        # cd ../Front-end/pdf-converter
         # cat src/Config.json | envsubst > src/Config.json
         # cat src/Config.json 
 
@@ -73,8 +73,9 @@ jobs:
         npx update-browserslist-db@latest
         npm cache clean --force
         npm run build
+        ls
 
-        aws s3 cp build/ s3://$websitebucket/ --recursive
+        # aws s3 cp build/ s3://$websitebucket/ --recursive
 
-        echo "App url is https://$websiteurl"
+        # echo "App url is https://$websiteurl"
 
