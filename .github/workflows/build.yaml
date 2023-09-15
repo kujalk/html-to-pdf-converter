@@ -64,7 +64,7 @@ jobs:
         export bucket=$bucket
 
         # Replace placeholders in the template file
-        # cd ../Front-end/pdf-converter
+        cd ../Front-end/pdf-converter
         # cat src/Config.json | envsubst > src/Config.json
         # cat src/Config.json 
 
