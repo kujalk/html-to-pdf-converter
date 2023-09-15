@@ -53,15 +53,15 @@ jobs:
         cd Terraform
 
         # Get output from Terraform
-        # websiteurl=$(terraform output website-endpoint)
-        # websitebucket=$(terraform output website-bucket)
-        # apigw=$(terraform output api-gw)
-        # bucket=$(terraform output pdf-storage-bucket)
+        websiteurl=$(terraform output website-endpoint)
+        websitebucket=$(terraform output website-bucket)
+        apigw=$(terraform output api-gw)
+        bucket=$(terraform output pdf-storage-bucket)
 
         # # Export the output as an environment variable
-        # export website=$website
-        # export apigw=$apigw
-        # export bucket=$bucket
+        export website=$website
+        export apigw=$apigw
+        export bucket=$bucket
 
         # Replace placeholders in the template file
         cd ../Front-end/pdf-converter
@@ -75,7 +75,7 @@ jobs:
         npm run build
         ls
 
-        # aws s3 cp build/ s3://$websitebucket/ --recursive
+        aws s3 cp build/ s3://$websitebucket/ --recursive
 
-        # echo "App url is https://$websiteurl"
+        echo "App url is https://$websiteurl"
 
