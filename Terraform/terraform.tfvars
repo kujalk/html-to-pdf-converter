@@ -1,0 +1,5 @@
+project_name     = "pdfconverter"
+front_end_bucket = "pdffromhtmlapps"
+lambda_file_zip  = "lambda_code.zip"
+lambda_layer_zip = "wkhtmltox-0.12.6-4.amazonlinux2_lambda.zip"
+apigw_stage      = "uat"
