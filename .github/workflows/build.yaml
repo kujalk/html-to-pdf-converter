@@ -69,8 +69,9 @@ jobs:
         cat src/Config.json 
 
         # Build react app and push app 
+        npm install react-scripts --save
         npm run build
         aws s3 cp build/ s3://$websitebucket/ --recursive
 
-        echo "App url is $websiteurl"
+        echo "App url is https://$websiteurl"
 
