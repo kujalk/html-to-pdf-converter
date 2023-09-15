@@ -70,6 +70,7 @@ jobs:
 
         # Build react app and push app 
         npm install react-scripts --save
+        npx update-browserslist-db@latest
         npm run build
         aws s3 cp build/ s3://$websitebucket/ --recursive
 
