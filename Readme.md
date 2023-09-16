@@ -91,3 +91,7 @@ apigw_stage      = "uat"
 <kbd>
   <img src="Diagrams/afterconversion.png">
 </kbd>
+
+## Developer
+
+Designed and developed by K.Janarthanan
