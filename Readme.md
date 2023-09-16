@@ -45,7 +45,7 @@ terraform {
 - **_AWS_SEC_ACCESS_KEY_** : AWS Secret Access Key
 
 <kbd>
-  <img src="Diagrams/Secrets.png">
+  <img src="Diagrams/secrets.png">
 </kbd>
 
 8. Fill the __terraform.tfvars__
