@@ -42,7 +42,7 @@ terraform {
 </p>
 
 - **_AWS_ACCESS_KEY_ID_** : AWS Access Key ID
-- **_AWS_SEC_ACCESS_KEY_** : AWS Secret Access Key
+- **_AWS_SECRET_ACCESS_KEY_** : AWS Secret Access Key
 
 <kbd>
   <img src="Diagrams/secrets.png">
