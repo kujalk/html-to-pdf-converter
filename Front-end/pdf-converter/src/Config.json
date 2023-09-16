@@ -1,4 +1,0 @@
-{
-  "api_gw_url": "https://${apigw}/api/v1/convert",
-  "s3_bucket_url": "https://${bucket}"
-}

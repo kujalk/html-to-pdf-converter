@@ -60,22 +60,23 @@ jobs:
         apigw=$(terraform output -raw api-gw)
         bucket=$(terraform output -raw pdf-storage-bucket)
 
-        # # Export the output as an environment variable
+        # Export the output as an environment variable
         export website=$website
         export apigw=$apigw
         export bucket=$bucket
 
         # Replace placeholders in the template file
         cd ../Front-end/pdf-converter
-        envsubst < src/Config.txt > src/Config.json
+        envsubst < src/Config.tpl > src/Config.json
         cat src/Config.json 
 
-        # Build react app and push app 
+        # Build react app
         npm install react-scripts --save
         npx update-browserslist-db@latest
         npm cache clean --force
         npm run build
 
+        # Push app to S3
         aws s3 cp build/ s3://$websitebucket/ --recursive
-        echo "App url is https://$websiteurl"
+        echo "App url is http://$websiteurl"
 
