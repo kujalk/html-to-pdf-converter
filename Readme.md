@@ -22,7 +22,7 @@ HTML to PDF converter app in AWS
 
 ## Pre-Requisites
 
-1. Create a  __S3 Bucket__ to store the Terraform backend file and update the __main.tf__
+1. Create a  __S3 Bucket__ to store the Terraform backend file and update the __provider.tf__
 ```terraform
 terraform {
   backend "s3" {
@@ -35,7 +35,7 @@ terraform {
 
 2. Create an IAM user with required privileges and download the accesskey id and secret access key
 
-4. Create GitHub __Secrets__
+3. Create GitHub __Secrets__
 
 <p align="center">
   <b>Secrets</b>
@@ -45,13 +45,8 @@ terraform {
 - **_AWS_SEC_ACCESS_KEY_** : AWS Secret Access Key
 
 <kbd>
-  <img src="Diagram/Secrets.png">
+  <img src="Diagrams/Secrets.png">
 </kbd>
-
-<p align="center">
-  <b>Variables</b>
-</p>
-
 
 8. Fill the __terraform.tfvars__
 ```terraform
@@ -67,7 +62,7 @@ apigw_stage      = "uat"
 2. Select the Branch and Apply
 
 <kbd>
-  <img src="Diagram/apply.png">
+  <img src="Diagrams/apply.png">
 </kbd>
 
 <p align="center">
