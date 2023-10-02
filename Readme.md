@@ -1,5 +1,6 @@
 ## Project
 HTML to PDF converter app in AWS
+Blog - https://scripting4ever.wordpress.com/2023/10/02/html-strings-to-pdf-generation-using-aws-services/
 
 ## Resources Created
 - S3 for Website hosting
